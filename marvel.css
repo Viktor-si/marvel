@@ -1,0 +1,199 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: 'Montserrat', sans-serif;
+	min-height: 100vh;
+}
+* {
+	box-sizing: border-box;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*:not(img[src="images/img1.jpg"])*/
+img {
+	max-width: 100%;
+}
+/* працюємо з contaner*/
+.contaner {
+	display: flex;
+	height: 100vh;
+}
+
+/* працюємо з content*/
+.content {
+	background-color: rgb(21, 21, 79);
+	width: 42%;
+	height: 100%;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;	
+} 
+/* працюємо з header*/
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header nav a {
+	font-size: 0.7rem;		
+}
+.header nav a,.ad a {
+	color: #fff;
+	text-decoration: none;
+}
+.header nav ul {
+	display: flex;
+	gap: 20px;
+}
+.header img {
+    width: 100px;    
+}
+/* працюємо з ad*/
+.ad {
+	text-align: center;		
+}
+
+.ad div a{
+	margin-top: 35px;
+	border-radius: 4.25rem;	
+	padding: 17px 29px;	
+	background-color: black;
+	position: relative;
+	transition: all 400ms linear;
+	display: inline-block;
+}
+.ad div a:hover {
+	color: red;	
+	letter-spacing: 3px;
+}
+
+.ad p {
+	color: white;
+	margin-top: 30px;
+}
+.social {
+	display: flex;
+	justify-content: right;
+	gap: 20px;
+}
+
+.social i {
+	color: #fff;
+	transition: all 400ms linear;	
+}
+.social i:not(i.fasebook) {
+	margin-top: 4px;
+}
+.social i.fasebook {
+	color: rgb(21, 21, 79);
+	background-color: #fff;
+
+	padding: 6px 9px 0 9px;
+	margin-bottom: 4px;
+
+	/* height: 24.7px; */
+	
+	font-size: 20px;
+	font-weight: bold;	
+	font-family: 'Montserrat', sans-serif;
+	
+	text-decoration: none;
+
+	border-radius: 100%;	
+}
+.social i.fasebook:hover {
+	background-color: red;
+	color: rgb(21, 21, 79);
+}
+.social i:hover {
+	color: red;
+	transform: rotate(360deg);
+}
+.film {
+	width: 58%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.flmg{
+	width: 50%;
+	height: 50%;
+	overflow: hidden;
+}
+.flmg img:hover {
+	transform: scale(1.2);
+} 
+.film img{
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	object-position: top;
+	transition: transform 400ms linear;	
+}
+.film .img-big {
+	width: 100%;
+}
+/*@media queries*/
+@media (max-width: 768px) {
+	.contaner {
+		display: block;
+	}
+	.content, .film {
+		width: 100%;
+	}
+}
+@media (max-width: 500px) {
+	.film .flmg
+	{
+		width: 100%;
+		height: auto;				
+	}
+	*:not(:root) {
+		font-size: 0.7rem;
+	}
+	.header nav a {
+		font-size: 0.37rem;
+	}
+	.ad div a {
+		padding: 11px 23px;
+	}
+}
